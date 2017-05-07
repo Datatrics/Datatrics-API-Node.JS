@@ -1,0 +1,7 @@
+c:\users\pepij\onedrive\documenten\visual studio 2017\Projects\c-sharp-api-sdk\c-sharp-sdk\bin\Debug\c-sharp-sdk.dll
+c:\users\pepij\onedrive\documenten\visual studio 2017\Projects\c-sharp-api-sdk\c-sharp-sdk\bin\Debug\c-sharp-sdk.pdb
+c:\users\pepij\onedrive\documenten\visual studio 2017\Projects\c-sharp-api-sdk\c-sharp-sdk\obj\Debug\c-sharp-sdk.dll
+c:\users\pepij\onedrive\documenten\visual studio 2017\Projects\c-sharp-api-sdk\c-sharp-sdk\obj\Debug\c-sharp-sdk.pdb
+c:\users\pepij\onedrive\documenten\visual studio 2017\Projects\c-sharp-api-sdk\c-sharp-sdk\obj\Debug\c-sharp-sdk.csprojResolveAssemblyReference.cache
+c:\users\pepij\onedrive\documenten\visual studio 2017\Projects\c-sharp-api-sdk\c-sharp-sdk\bin\Debug\Newtonsoft.Json.dll
+c:\users\pepij\onedrive\documenten\visual studio 2017\Projects\c-sharp-api-sdk\c-sharp-sdk\bin\Debug\Newtonsoft.Json.xml
