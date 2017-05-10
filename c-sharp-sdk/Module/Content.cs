@@ -24,7 +24,10 @@ namespace Datatrics.Module
         public async Task<JObject> Get(string contentid = null, Dictionary<string, object> args = null)
         {
             if (args == null)
-                args = new Dictionary<string, object> { { "limit", "25" }, { "type", "item" } };
+                args = new Dictionary<string, object> { { "limit", "25" } };
+
+            if (!args.ContainsKey("type"))
+                args["type"] = "item";
 
             if (!String.IsNullOrEmpty(contentid))
                 return await client.GetAsync(url + "/" + contentid, args);

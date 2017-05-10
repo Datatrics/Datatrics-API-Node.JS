@@ -34,6 +34,7 @@ namespace Datatrics
             client.DefaultRequestHeaders
               .Accept
               .Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            client.DefaultRequestHeaders.Add("x-apikey", ApiKey);
 
             _RegisterModules();
         }
@@ -48,8 +49,8 @@ namespace Datatrics
 
         internal async System.Threading.Tasks.Task<JObject> PostAsync(string url, JObject data)
         {
-            HttpResponseMessage response = await client.PostAsync("/" + ApiVersion + url + "?apikey" + ApiKey, new StringContent(data.ToString(Formatting.None)));
-            
+            HttpResponseMessage response = await client.PostAsync("/" + ApiVersion + url , new StringContent(data.ToString(Formatting.None)));
+
             return JObject.Parse(await response.Content.ReadAsStringAsync());
         }
 
