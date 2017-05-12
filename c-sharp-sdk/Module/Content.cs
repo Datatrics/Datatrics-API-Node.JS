@@ -94,5 +94,18 @@ namespace Datatrics.Module
 
             return await client.PutAsync(url + "/" + (string)content["contentid"], content);
         }
+
+        /// <summary>
+        /// Updates a maximum of 50 Content items at a time
+        /// </summary>
+        /// <param name="content">JArray containing content items with a maximum of 50</param>
+        /// <returns>Result of the request</returns>
+        public async Task<JObject> Bulk(JArray content, string type = "items")
+        {
+            if (content.Count > 50)
+                throw new Exception("Maximum of 50 content allowed at a time");
+
+            return await client.PostAsync(url + "/bulk", new JObject { ["items"] = content, ["type"] = type });
+        }
     }
 }

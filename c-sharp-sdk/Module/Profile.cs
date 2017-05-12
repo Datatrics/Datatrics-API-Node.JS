@@ -66,5 +66,18 @@ namespace Datatrics.Module
 
             return await client.PutAsync(url + "/" + (string)profile["profileid"], profile);
         }
+
+        /// <summary>
+        /// Updates a maximum of 50 profiles at a time
+        /// </summary>
+        /// <param name="profiles">JArray containing profiles with a maximum of 50</param>
+        /// <returns>Result of the request</returns>
+        public async Task<JObject> Bulk(JArray profiles)
+        {
+            if (profiles.Count > 50)
+                throw new Exception("Maximum of 50 profiles allowed at a time");
+
+            return await client.PostAsync(url + "/bulk", new JObject {["items"] = profiles});
+        }
     }
 }
