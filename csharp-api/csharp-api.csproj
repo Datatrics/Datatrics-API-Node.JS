@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.2</TargetFramework>
+    <RootNamespace>Datatrics</RootNamespace>
+    <PackageId>datatrics-csharp-api</PackageId>
+    <Authors>Datatrics</Authors>
+    <Company>Datatrics</Company>
+    <Product>Datatrics C# API client</Product>
+    <Description>This package is a convenience wrapper to communicate with the Datatrics REST-API</Description>
+    <RepositoryUrl>https://github.com/Datatrics/csharp-api</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/Datatrics/csharp-api</PackageProjectUrl>
+    <PackageIconUrl>https://www.datatrics.com/wp-content/themes/datatrics/assets/img/logo/icon.png</PackageIconUrl>
+    <PackageTags>Datatrics API SDK</PackageTags>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <NeutralLanguage>en-150</NeutralLanguage>
+    <AssemblyName>csharp-api</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.2" />
+  </ItemGroup>
+
+</Project>
