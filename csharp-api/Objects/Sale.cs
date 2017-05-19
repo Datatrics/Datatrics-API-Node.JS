@@ -25,12 +25,23 @@ namespace Datatrics.Objects
 
         public override JObject ToJObject()
         {
+            JToken metadata;
+            JObject item = new JObject();
+            if (Attributes.TryGetValue("metadata", out metadata))
+            {
+                item.Merge(Attributes);
+                item.Merge(metadata);
+                item.Remove("metadata");
+            }
+            else
+                item = Attributes;
+
             return new JObject
             {
                 ["conversionid"] = Id,
                 ["objecttype"] = ObjectType,
                 ["source"] = Source,
-                ["conversion"] = Attributes
+                ["conversion"] = item
             };
         }
 
